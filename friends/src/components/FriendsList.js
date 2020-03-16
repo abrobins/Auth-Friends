@@ -28,7 +28,7 @@ const FriendsList = () => {
 
   return (
     <div>
-      <h3>Testing this is showing up</h3>
+      <h3>List of Friends</h3>
       {friendList.map(friend => (
         <>
           <p>Name: {friend.name}</p>
