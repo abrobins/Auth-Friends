@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
@@ -28,13 +29,16 @@ const FriendsList = () => {
   return (
     <div>
       <h3>Testing this is showing up</h3>
-      {friendList.map(friend => {
+      {friendList.map(friend => (
         <>
           <p>Name: {friend.name}</p>
           <p>Age: {friend.age}</p>
           <p>Email: {friend.email}</p>
-        </>;
-      })}
+        </>
+      ))}
+      <Link to="/protected/add">
+        <button>Add a Friend</button>
+      </Link>
     </div>
   );
 };
